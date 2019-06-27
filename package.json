@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest-int": "rm -rf dist && tsc",
+    "test-int": "jasmine JASMINE_CONFIG_PATH=spec/jasmine-int.json",
+    "tsc": "tsc"
   },
   "author": "",
   "license": "MIT",
@@ -20,8 +22,10 @@
     "@types/loglevel": "^1.5.4",
     "@types/node": "^12.0.2",
     "@types/puppeteer": "^1.12.4",
+    "@types/puppeteer-core": "^1.9.0",
     "@types/selenium-webdriver": "^4.0.0",
     "jasmine": "^3.4.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "webdriver-manager-replacement": "^2.0.0"
   }
 }

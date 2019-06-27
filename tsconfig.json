@@ -4,7 +4,7 @@
     "allowUnusedLabels": false,
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [ "es2017" ],
+    "lib": [ "es2017", "dom" ],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
@@ -23,4 +23,3 @@
     "web"
   ]
 }
-

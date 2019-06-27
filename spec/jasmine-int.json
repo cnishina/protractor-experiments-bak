@@ -1,0 +1,8 @@
+{
+  "spec_dir": "dist/",
+  "spec_files": [
+    "**/puppeteer/**/*.spec-int.js"
+  ],
+  "oneFailurePerSpec": true,
+  "random": false
+}
