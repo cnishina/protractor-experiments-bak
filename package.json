@@ -26,6 +26,6 @@
     "@types/selenium-webdriver": "^4.0.0",
     "jasmine": "^3.4.0",
     "typescript": "^3.4.5",
-    "webdriver-manager-replacement": "^2.0.0"
+    "webdriver-manager-replacement": "^2.0.1"
   }
 }
