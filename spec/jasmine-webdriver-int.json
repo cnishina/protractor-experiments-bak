@@ -1,0 +1,8 @@
+{
+  "spec_dir": "dist/",
+  "spec_files": [
+    "**/webdriver/**/*.spec-int.js"
+  ],
+  "oneFailurePerSpec": true,
+  "random": false
+}
