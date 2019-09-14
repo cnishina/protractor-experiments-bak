@@ -21,10 +21,10 @@ describe('browser puppeteer', () => {
   });
 
   describe('goto', () => {
-    it('should work', async () => {
+    it('should navigate to a url and check the current url', async () => {
       const browser = new Browser({page});
-      await browser.goto('https://github.com');
-      await page.close();
+      await browser.goto('https://github.com/');
+      expect(await browser.getCurrentUrl()).toBe('https://github.com/');
     });
   });
 });
