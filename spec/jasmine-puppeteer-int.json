@@ -1,7 +1,7 @@
 {
   "spec_dir": "dist/",
   "spec_files": [
-    "**/puppeteer/**/*.spec-int.js"
+    "**/puppeteer/**/element_finder.spec-int.js"
   ],
   "oneFailurePerSpec": true,
   "random": false

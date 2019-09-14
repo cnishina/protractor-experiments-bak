@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "pretest-int": "rm -rf dist && tsc",
-    "test-int": "jasmine JASMINE_CONFIG_PATH=spec/jasmine-int.json",
-    "tsc": "tsc"
+    "test-int": "npm run test-puppeteer-int && npm run test-webdriver-int",
+    "test-puppeteer-int": "npm run pretest-int && jasmine JASMINE_CONFIG_PATH=spec/jasmine-puppeteer-int.json",
+    "test-webdriver-int": "npm run pretest-int && jasmine JASMINE_CONFIG_PATH=spec/jasmine-webdriver-int.json",
+    "tsc": "tsc",
+    "wdm": "wdm update --out_dir downloads --chromium --max_versions.chromium 76"
   },
   "author": "",
   "license": "MIT",
@@ -26,6 +29,6 @@
     "@types/selenium-webdriver": "^4.0.0",
     "jasmine": "^3.4.0",
     "typescript": "^3.4.5",
-    "webdriver-manager-replacement": "^2.0.1"
+    "webdriver-manager-replacement": "^2.0.2"
   }
 }
