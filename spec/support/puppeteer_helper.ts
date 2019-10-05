@@ -37,7 +37,7 @@ export class PuppeteerHelper {
 
   async getPage() {
     const executablePath = await this.getChromium();
-    const headless = false;
+    const headless = true;
     const width = this.width;
     const height = this.height;
     const args = [`--window-size=${width},${height}`]
