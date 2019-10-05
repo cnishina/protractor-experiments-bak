@@ -41,9 +41,10 @@ const options: wdm.Options = {
 
 export const capabilities = {
   browserName: 'chrome',
-  chromeOptions: {
+  'goog:chromeOptions': {
     args: ['--headless', '--disable-gpu']
   },
 };
 
 export const seleniumAddress = 'http://127.0.0.1:4444/wd/hub';
+

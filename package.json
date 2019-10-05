@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "circleci-wdm": "wdm update --out_dir downloads --chromium --max_versions.chromium 77",
     "pretest-int": "rm -rf dist && tsc",
     "test-int": "npm run test-puppeteer-int && npm run test-webdriver-int",
     "test-puppeteer-int": "npm run pretest-int && jasmine JASMINE_CONFIG_PATH=spec/jasmine-puppeteer-int.json",
