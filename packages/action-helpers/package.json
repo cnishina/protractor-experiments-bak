@@ -1,0 +1,10 @@
+{
+  "name": "@protractor/action-helpers",
+  "version": "0.0.0-PLACEHOLDER",
+  "peerDependencies": {
+    "@protractor/webdriver-manager": "0.0.0-PLACEHOLDER"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}

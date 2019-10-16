@@ -1,0 +1,49 @@
+{
+  "name": "@protractor/webdriver-manager",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Download manager",
+  "bin": {
+    "webdriver-manager": "bin/webdriver-manager"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "jasmine": "jasmine",
+    "posttsc": "mkdir -p ./built/src && mv ./dist/src/legacy/config.* ./built/src/ && rm -rf ./dist/src/legacy",
+    "pretsc": "rm -rf ./dist/ && rm -rf downloads/",
+    "proxy-server": "tsc && node dist/spec/server/proxy_server.js",
+    "test": "tsc && npm run test-unit && npm run test-int && npm run test-proxy && npm run test-e2e",
+    "test-e2e": "tsc && jasmine JASMINE_CONFIG_PATH=spec/jasmine-e2e.json",
+    "test-int": "tsc && jasmine JASMINE_CONFIG_PATH=spec/jasmine-int.json",
+    "test-ptor": "npm run tsc && node bin/webdriver-manager update && jasmine JASMINE_CONFIG_PATH=spec/jasmine-ptor.json",
+    "test-proxy": "tsc && jasmine JASMINE_CONFIG_PATH=spec/jasmine-proxy.json",
+    "test-unit": "tsc && jasmine JASMINE_CONFIG_PATH=spec/jasmine-unit.json",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "loglevel": "^1.6.4",
+    "request": "^2.88.0",
+    "semver": "^6.3.0",
+    "tar": "^5.0.5",
+    "xml2js": "^0.4.22",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.4.32",
+    "@types/http-proxy": "^1.17.0",
+    "@types/jasmine": "^3.4.4",
+    "@types/node": "^12.11.1",
+    "@types/request": "^2.48.3",
+    "@types/rimraf": "^2.0.2",
+    "@types/semver": "^6.0.2",
+    "@types/tar": "^4.0.3",
+    "@types/xml2js": "^0.4.5",
+    "@types/yargs": "^13.0.3",
+    "http-proxy": "^1.18.0",
+    "jasmine": "^3.5.0",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}
